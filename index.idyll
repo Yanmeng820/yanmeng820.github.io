@@ -1,0 +1,18 @@
+[meta title:"MyIdyllPost" description:"Short description of your project" /]
+
+[Header
+  fullWidth:true
+  title:"Yanmeng_Xin"
+  subtitle:"Welcome to Idyll. Open index.idyll to start writing"
+  author:"Your Name Here"
+  authorLink:"https://idyll-lang.org"
+  date:"Apr 15, 2021"
+  background:"#222222"
+  color:"#ffffff"
+   /]
+
+[var name:"x" value:0 /]
+
+## Introduction
+
+yz stupid
