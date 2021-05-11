@@ -1,0 +1,84 @@
+[meta title:"Final_part3" description:"Short description of your project" /]
+
+[Header
+  fullWidth:true
+  title:"COVID-19 Vaccinations in US"
+  subtitle:""
+  author:"Yanmeng Xin"
+  authorLink:"https://idyll-lang.org"
+  date:"May 10, 2021"
+  background:"#222222"
+  color:"#ffffff"
+   /]
+
+[var name:"x" value:0 /]
+
+## Introduction
+
+Hello everyone! This is a web-page regarding to the COVID-19 Vaccinations in the United States.This also represents all vaccine partners including jurisdictional partner clinics, retail pharmacies, long-term care facilities, dialysis centers, Federal Emergency Management Agency and Health Resources and Services Administration partner sites, and federal entity facilities.
+
+Befor we get started, I would like to introduce the dataset.We'll the use the data table for [COVID-19 Vaccinations in the United States](https://covid.cdc.gov/covid-data-tracker/?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-updates%2Fcases-in-us.html#vaccinations) from Centers for Disease Control and Prevention,the national public health agency of the United States.
+
+[data name:"covid" source:"999.json"/]
+[Table data:covid /]
+
+## Total Doses Administered Reported to the CDC by State/Territory and for Select Federal Entities per 100,000 of the Total Population
+
+
+[IdyllVegaLite data:covid spec:`{
+  width: 800,
+  height: 400,
+  mark: "bar",
+  encoding: {
+    x: {field: "State/Territory/Federal Entity", title:"State/Territory/Federal Entity"},
+    y:{field:"Total Doses Delivered", type: "quantitative", title:"Total Doses Delivered"}
+  }
+}` /]
+
+
+[IdyllVegaLite data:covid spec:`{
+  width: 800,
+  height: 400,
+  mark: "bar",
+  encoding: {
+    x: {field: "State/Territory/Federal Entity", title:"State/Territory/Federal Entity"},
+    y:{field:"People with at least One Dose by State of Residence", type: "quantitative", title:"People with at least One Dose by State of Residence"}
+  }
+}` /]
+
+[IdyllVegaLite data:covid spec:`{
+  width: 800,
+  height: 400,
+  mark: "bar",
+  encoding: {
+    x: {field: "State/Territory/Federal Entity", title:"State/Territory/Federal Entity"},
+    y:{field:"People Fully Vaccinated by State of Residence", type: "quantitative", title:"People Fully Vaccinated by State of Residence"}
+  }
+}` /]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

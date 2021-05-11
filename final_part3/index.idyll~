@@ -1,0 +1,38 @@
+[meta title:"Final_part3" description:"Short description of your project" /]
+
+[Header
+  fullWidth:true
+  title:"COVID-19 Vaccinations in US"
+  subtitle:""
+  author:"Yanmeng Xin"
+  authorLink:"https://idyll-lang.org"
+  date:"May 10, 2021"
+  background:"#222222"
+  color:"#ffffff"
+   /]
+
+[var name:"x" value:0 /]
+
+## Introduction
+
+Hello everyone! This is a web-page regarding to the COVID-19 Vaccinations in the United States.This also represents all vaccine partners including jurisdictional partner clinics, retail pharmacies, long-term care facilities, dialysis centers, Federal Emergency Management Agency and Health Resources and Services Administration partner sites, and federal entity facilities.
+
+##Total Doses Administered Reported to the CDC by State/Territory and for Select Federal Entities per 100,000 of the Total Population
+
+
+[IdyllVegaLite data:corgsTime spec:`{
+  width: 400,
+  height: 200,
+  mark: "line",
+  encoding: {
+    x: {field: "Years", type: "temporal", axis:{title:"Year", format:"%Y"}},
+    y: {field: "United States", type: "quantitative"},
+  }
+}` /]
+
+
+
+
+
+
+
